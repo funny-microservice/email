@@ -14,7 +14,7 @@ module.exports = async function send(options) {
         }
     })
     const info = await transporter.sendMail({
-        from: `xk email service<${secret.user}>`,
+        from: `${secret.user.split('@').shift()}<${secret.user}>`,
         to: options.to,
         subject: options.subject,
         // text: '',
