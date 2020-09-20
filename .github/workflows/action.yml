@@ -1,0 +1,29 @@
+name: Email
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  ENV: production
+
+jobs:
+  build:
+
+    runs-on: node-latest
+
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build
+#       run: npm build --production
+#     - name: Run tests
+#       run: npm test
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+    - run: npm install
+    - run: npm test
