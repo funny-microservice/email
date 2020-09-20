@@ -13,7 +13,7 @@ const senecaWebConfig = {
     parseBody: false
   }
 }
-const app = Express()
+Express()
   .use(require('body-parser').json())
   .use(context)
   .listen(require('./config.json').http_port)

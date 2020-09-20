@@ -1,0 +1,6 @@
+extends:
+  - standard
+rules: {
+  eol-last: ["error", "never"],
+  # no-unused-vars: ["off"]
+}
