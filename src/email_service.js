@@ -1,6 +1,6 @@
 
 const nodemailer = require('nodemailer')
-const secret = require('./config.json')
+const secret = require('../config.json')
 
 module.exports = async function send(options) {
     const transporter = nodemailer.createTransport({

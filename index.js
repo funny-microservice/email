@@ -16,11 +16,11 @@ const senecaWebConfig = {
 const app = Express()
   .use(require('body-parser').json())
   .use(context)
-  .listen(5000)
+  .listen(require('./config.json').http_port)
 
 seneca
   .use(senecaWeb, senecaWebConfig)
-  .use('api')
+  .use('./src/web')
   .client({
     pin: 'cmd:email'
   })

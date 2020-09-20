@@ -2,7 +2,7 @@ module.exports = function api(options) {
   this.add('init:api', function(msg, respond) {
     this.act('role:web', {
       routes: {
-        prefix: '/v1',
+        prefix: '/v1/api',
         pin: 'cmd:email',
         map: {
           email: {
